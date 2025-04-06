@@ -1,0 +1,9 @@
+.NewWordPage {
+  background: linear-gradient(to bottom, #FF6F61, #B22234);
+  height: 100vh; // Garante que o body cubra toda a altura da janela
+  margin: 0; // Remove margens padrão
+
+  .titulo{
+    color: #00274D;
+  }
+}

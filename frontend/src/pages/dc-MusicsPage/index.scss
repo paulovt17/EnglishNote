@@ -1,0 +1,51 @@
+.MusicsPage {
+  background: linear-gradient(to bottom, #FF6F61, #B22234);
+  min-height: 100vh;
+  height: 100%; // Garante que o body cubra toda a altura da janela
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  .titulo{
+    color: #00274D;
+  }
+
+  .pesquisar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    input{
+      width: 50em;
+      height: 4em;
+      border-radius: 2em;
+      border: none;
+      background-color: #FCF8D1;
+      box-shadow: 2px 2px 8px black;
+    }
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .musics{
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+    
+  }
+
+  .addCircle{
+    width: 8em;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+  }
+
+  .addCircle:hover{
+    width: 10em;
+  }
+}

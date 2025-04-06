@@ -1,0 +1,111 @@
+LoginPage  aa-LoginPage
+LandingGeral  ab-LandingGeral
+FilmesVistoSemana  ac-FilmesVistoSemana
+DiasTreinadoSemana  ad-DiasTreinadoSemana
+WeekWordsPage  aea-WeekWordsPage
+WeekListenedMusic  aeb-WeekListenedMusic
+LandingFSA  ba-LandingFSA
+PaginaFilmes  bb-PaginaFilmes
+PaginaFIlmeSelected  bba-PaginaFIlmeSelected
+PaginaSeries  bc-PaginaSeries
+PaginaSerieSelected  bca-PaginaSerieSelected
+PaginaAnimes  bd-PaginaAnimes
+PaginaAnimeSelected  bda-PaginaAnimeSelected
+AddFSAPage  be-AddFSAPage
+PaginaVistos  bf-PaginaVistos
+LandingTreino  ca-LandingTreino
+TreinoHoje  cb-TreinoHoje
+ComoFazer  cba-ComoFazer
+Treinos  cc-Treinos
+SelectedTreino  cca-SelectedTreino
+DiasTreinados  cd-DiasTreinados
+TreinoDia  cda-TreinoDia
+AddTreino  cf-AddTreino
+LandingEnglish  da-LandingEnglish
+WordsPage  db-WordsPage
+MusicsPage  dc-MusicsPage
+SelectedMusicPage  dca-SelectedMusicPage
+NewWordPage  de-NewWordPage
+NewMusicPage  df-NewMusicPage
+
+
+
+
+
+
+
+
+
+
+
+LoginPage  aa-LoginPageRepository.js
+LandingGeral  ab-LandingGeralRepository.js
+FilmesVistoSemana  ac-FilmesVistoSemanaRepository.js
+DiasTreinadoSemana  ad-DiasTreinadoSemanaRepository.js
+WeekWordsPage  aea-WeekWordsPageRepository.js
+WeekListenedMusic  aeb-WeekListenedMusicRepository.js
+LandingFSA  ba-LandingFSA
+PaginaFilmes  bb-PaginaFilmesRepository.js
+PaginaFIlmeSelected  bba-PaginaFIlmeSelectedRepository.js
+PaginaSeries  bc-PaginaSeriesRepository.js
+PaginaSerieSelected  bca-PaginaSerieSelectedRepository.js
+PaginaAnimes  bd-PaginaAnimesRepository.js
+PaginaAnimeSelected  bda-PaginaAnimeSelectedRepository.js
+AddFSAPage  be-AddFSAPageRepository.js
+PaginaVistos  bf-PaginaVistosRepository.js
+LandingTreino  ca-LandingTreino
+TreinoHoje  cb-TreinoHojeRepository.js
+ComoFazer  cba-ComoFazerRepository.js
+Treinos  cc-TreinosRepository.js
+SelectedTreino  cca-SelectedTreinoRepository.js
+DiasTreinados  cd-DiasTreinadosRepository.js
+TreinoDia  cda-TreinoDiaRepository.js
+AddTreino  cf-AddTreinoRepository.js
+LandingEnglish  da-LandingEnglish
+WordsPage  db-WordsPageRepository.js
+MusicsPage  dc-MusicsPageRepository.js
+SelectedMusicPage  dca-SelectedMusicPageRepository.js
+NewWordPage  de-NewWordPageRepository.js
+NewMusicPage  df-NewMusicPageRepository.js
+
+
+
+
+
+
+
+
+
+
+
+
+LoginPage  aa-LoginPageController.js
+LandingGeral  ab-LandingGeralController.js
+FilmesVistoSemana  ac-FilmesVistoSemanaController.js
+DiasTreinadoSemana  ad-DiasTreinadoSemanaController.js
+WeekWordsPage  aea-WeekWordsPageController.js
+WeekListenedMusic  aeb-WeekListenedMusicController.js
+LandingFSA  ba-LandingFSA
+PaginaFilmes  bb-PaginaFilmesController.js
+PaginaFIlmeSelected  bba-PaginaFIlmeSelectedController.js
+PaginaSeries  bc-PaginaSeriesController.js
+PaginaSerieSelected  bca-PaginaSerieSelectedController.js
+PaginaAnimes  bd-PaginaAnimesController.js
+PaginaAnimeSelected  bda-PaginaAnimeSelectedController.js
+AddFSAPage  be-AddFSAPageController.js
+PaginaVistos  bf-PaginaVistosController.js
+LandingTreino  ca-LandingTreino
+TreinoHoje  cb-TreinoHojeController.js
+ComoFazer  cba-ComoFazerController.js
+Treinos  cc-TreinosController.js
+SelectedTreino  cca-SelectedTreinoController.js
+DiasTreinados  cd-DiasTreinadosController.js
+TreinoDia  cda-TreinoDiaController.js
+AddTreino  cf-AddTreinoController.js
+LandingEnglish  da-LandingEnglish
+WordsPage  db-WordsPageController.js
+MusicsPage  dc-MusicsPageController.js
+SelectedMusicPage  dca-SelectedMusicPageController.js
+NewWordPage  dd-NewWordPageController.js
+NewMusicPage  de-NewMusicPageController.js
+

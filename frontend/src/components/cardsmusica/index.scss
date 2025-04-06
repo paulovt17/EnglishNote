@@ -1,0 +1,72 @@
+.musics{ 
+    display: flex;
+    flex-direction: column;
+    
+    .music{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5em;
+      
+        a{
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3em;
+            box-shadow: 4px 4px 8px #242323;
+        }
+        
+        a:hover{
+            .musicimg{
+                width: 24em;
+                height: 14em;
+            }
+                    
+            p{
+                font-size: 1.7em;
+            }
+    
+        }
+        
+
+        .musicimg{
+            width: 22em;
+            height: 13em;
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+                
+        p{
+            padding: 0.7em;
+            font-size: 1.5em;
+            width: 15em;
+        }
+
+    }
+
+        #doisponto{
+            font-size: 3em;
+            color: #fff;
+        }
+
+        #icon{
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .icones{
+            display: flex;
+            gap: 1em;
+        }
+
+        #check{
+            color: green;
+            font-size: 5em;
+        }
+    }
+}

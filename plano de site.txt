@@ -1,0 +1,87 @@
+Landing page Geral{ Pagina que fará atalho aos três objetivos principais sendo o primeiro a pagina de filme, serie ou anime; o segundo sendo a pagina de treino; e o terceiro a pagina de estudo ingles.
+Para cada um dos atalhos terá uma imagem correspondente a ele e abaixo deles um grafico em barra personalizado revelando o progresso semanal.
+
+
+Movie page{ Este objetivo servirá para organizar os filmes, animes e series que o usuario tem a assistir, com ele podendo adicionar esses filmes e marcar se ja foi visto ou ate onde foi visto.
+
+landing{ pagina incial onde havera os cards que podem levar aos filmes, series ou anime. Também havera um botão que levara para a pagina de adicionar e um icone em barra onde tera o caminho pra pagina de filmes visto}
+
+add page{ Nesta pagina o usuario coloca o nome do filme, coloca se é filme, série ou anime e coloca quantos episódios tem se for anime ou quantos episodios tem em cada temporada se for série. Também poderá colocar a sinopse, a imagem de capa do filme e a prioridade sendo baixa, media e alta}
+
+vistos page{ Nesta pagina mostrara todos filmes que ja foram vistos pelo usuario e a avalição do usuario ao lado que poderá ser editado}
+
+filmes{ Nesta pagina havera os filmes que o usuario ainda tem a ver e ao clicar sera direcionado ao selected movie page }
+
+selected movie page { aqui o usuario podera avialiar o filme}
+
+series{ Nesta pagina havera as series que o usuario ainda tem a ver e ao clicar sera direcionado ao selected serie page }
+
+selected serie page{ aqui o usuario podera marcar os episódios que viu e avaliá-lo.}
+
+animes{ Nesta pagina havera os animes que o usuario ainda tem a ver e ao clicar sera direcionado ao selected anime page .}
+
+selected anime page{ aqui o usuario podera marcar os episódios que viu e avaliá-lo.}
+}
+
+
+Trainning page{ Este objetivo servirá para organizar os treinos que o usuário fara, tendo ele a autonomia de adicionar quais treinos fara e a quantidade. o usuario tambem tera o controle de seu progresso e constancia.
+
+landing{ pagina inicial onde tera o card que levara ao treino do dia e um card menos chamativo que levara para a pagina treinos e um icone em barra onde tera o caminho pra pagina dias treinado}
+
+treinos page{ nesta pagina tera os treinos de segunda a sabado onde o usuario podera alterar a ordem dos treinos ou excluir algum treino. alem de um botão de adicionar treino. ao clicar no card sera levado a pagina como fazer}
+
+add treino page{ nesta pagina o usuario devera descrever o nome do exercício, se ele é por series ou por tempo, a quantidade de séries e repetições ou tempo de duraçao além do link de um vídeo que ensinará como faz }
+
+dias treinados{ nesta pagina tera um calendario mostrando os dias que o usuario treinou}
+
+treino de hoje{ nesta pagina aparecera os treinos na ordem que ele fara e vai passando de acordo com que ele faça. Tambem haverá um botao de avançar, um botão de voltar e um botão que levara a como fazer page }
+
+como fazer page{ nesta pagina mostrara como fazer o exercício correspondente}
+}
+
+
+English page{ Este objetivo servira para o usuario aprimorar seu conhecimento no inglês através de anotações de novas palvaras e expressões. Além disso ele deverá fazer frases com essas palavras. O usuário tambem podera adicionar musicas em ingles e apartir daí anotar as novas palavras aprendidas. 
+
+landing{ pagina inicial ao qual terão cards retangulares, um deles levara a words page e outro a musics page, além de um botôes que podera levar a new word page ou add music page}
+
+words page{ aqui aparecera todas as palavras ou expressões que o usuario adicionou em ordem alfabética, além de suas traduções e frases, ele podera editar ou deletar essas palavras. Nesta página também tera o botão que levara a new word page}
+
+new word page { Nesta pagina o usuario devera escrever a nova palavra aprendida em inglês, sua tradução em português, álem de criar uma frase com esta palavra, também deverá dizer se é palavra ou expressão }
+
+musics page { Nesta pagina haverao todas as musicas que ao clicar o usuario sera levado a pagina dessa musica. Aqui tambem tera o botão que levara a add music page e tambem tera o botão de deletar a musica. E se o usuario terminar de anotar as palavras dessa musica aparecera um icone de concluido ao lado}
+
+add music page { Nesta pagina o usuario devera escrever o nome da musica que vai adionar, a letra em inglês e em português, além do link pra escutar essa musica}
+
+selected music page{ Aqui tera a letra e link da musica, um campo com as palavras anotadas referente a essa musica e um campo onde o usuario pode escrever a nova palavra aprendida e sua tradução e ao lado um botão de enviar. Também haverá um botão de concluído}
+}
+
+
+
+Dicas de Estilização
+
+Tipografia: Use fontes modernas e legíveis. Por exemplo, fontes como "Roboto" ou "Open Sans" são excelentes escolhas para manter um design clean.
+
+Cores:
+
+Filmes: Tons escuros e sofisticados (preto, cinza, vermelho).
+
+Treinos: Cores energéticas (azul, verde limão, laranja).
+
+Inglês: Tons leves e educacionais (azul claro, bege, branco, vermelho).
+
+
+Animações: Adicione transições suaves nos elementos clicáveis para melhorar a experiência.
+
+Tecnologias Recomendadas
+
+Front-end: React.js com para estilização rápida e responsiva.
+
+Back-end: Node.js com Express para lidar com as rotas e armazenamento de dados.
+
+Banco de Dados: Mysql para gerenciar as informações (filmes, treinos, palavras, músicas).
+
+ Hospedagem de Banco de Dados: [Supabase]
+
+ Hospedagem de Backend: [Railway]
+
+ Hospedagem de Frontend: [Vercel]

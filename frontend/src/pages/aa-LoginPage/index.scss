@@ -1,0 +1,47 @@
+.LoginPage {
+    background-image: url('../../../public/assets/images/just-a-chill-guy.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh; // Garante que o body cubra toda a altura da janela
+    padding: 1em; 
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  
+    h1{
+      color: #A8C1C8;
+    }
+    h2{
+      color: #92A1C2;
+    }
+  
+  /*  img{
+      height: 300px;
+      : 200px;
+      border-radius: 5px;
+      box-shadow: 4px 4px 8px black;
+     
+    }*/
+  
+    .principal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      padding: 1em 2em 1em 35vw;
+      
+     input{
+        height: 3em;
+        width: 30em;
+     }
+
+     button{
+        height: 4em;
+        width: 15em;
+        background-color: #1053FD;
+        color: #fff;
+        border: 1px solid #363434;
+     }
+
+    }
+  }

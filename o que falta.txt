@@ -1,0 +1,6 @@
+O que eu devo fazer na parte de música:
+
+add no banco de dados na tabela words os campos: past_tense e past participle e no tipo adicionar substantivo e verbo e tirar word. Além disso devo alterar o backend e os cruds com essas mudanças.
+add a página dos verbos onde tera a tabela das formas. e na página words add o filtro de substantivo
+também devo fazer a limitação de palavras pra implementar a função ler mais na pagina musica selecionada
+e devo aprender a usar o Onchecked

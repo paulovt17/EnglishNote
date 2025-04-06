@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+   h1{
+    font: bold 2rem 'Roboto';
+    text-align: center;
+    margin-top: 2em;
+   }
+
+   h2{
+    font: bold 2rem 'Roboto';
+    text-align: center;
+   }
+
+   p{
+    font: 400 2rem 'Open Sans';
+   }
+   
+   .icone-menu{
+    width: 4em;
+    position: fixed;
+    top: 1em;
+    left: 2em;
+   }
+   .icone-menu:hover{
+    width: 5em;
+    height: 5.2em;
+   }
+  }

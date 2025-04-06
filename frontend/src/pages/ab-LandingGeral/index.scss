@@ -1,0 +1,46 @@
+.LandingGeral {
+  background: linear-gradient(to right, #221F1F 25%, #00274D 50%, #B22234 95%);
+  height: 100vh; // Garante que o body cubra toda a altura da janela
+  padding: 1em; 
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+
+  h1, h2{
+    color: #fff;
+  }
+
+  i{
+    font-size: 4em;
+    position: fixed;
+    right: 1em;
+    color: #fff;
+  }
+
+  i:hover{
+    color: red;
+  }
+  
+
+  .principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    img{
+      height: 19em;
+      width: 13em;
+      border-radius: 5px;
+      box-shadow: 4px 4px 8px black;
+    }
+    img:hover{
+      height: 21em;
+      width: 14em;
+    }
+
+    div{
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

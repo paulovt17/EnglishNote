@@ -1,0 +1,106 @@
+.SelectedMusicPage {
+  background: linear-gradient(to bottom, #FF6F61, #B22234);
+  min-height: 100vh; // Garante que o body cubra toda a altura da janela
+  height: 100%;
+  padding: 0.1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+
+  .titulo{
+    color: #00274D;
+  }
+
+  .musica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    .letra{
+      display: flex;
+      flex-direction: row;
+      gap: 3em;
+      
+      img{
+        width: 3px;
+        height: 5em;
+        min-height: 100%;
+      }
+
+      p{
+        border: 1px solid black;
+        color: #fff;
+        max-width: 20em;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .addword{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    .botoes{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 13.5em;
+
+      button{
+        color: #fff;
+        background-color: #87CEEB;
+        width: 13em;
+        height: 3em;
+        border-radius: 1em;
+      }
+
+    }
+
+    .inputs{
+      display: flex;
+      flex-direction: column; 
+
+      p{
+        color: #fff;
+        font-size: 1em;
+      }
+      .top{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        input{
+          background-color: #FCF8D1;
+          height: 4em;
+        }
+      }
+
+      .phrase{
+       
+        input{
+          width: 100%;
+          height: 4em;
+          background-color:#FCF8D1;
+        }
+      }
+    }
+
+    .send{
+        color: #fff;
+        background-color: #87CEEB;
+        width: 13em;
+        height: 3em;
+        border-radius: 1em;
+        align-self: flex-end;
+    }
+  }
+
+  .palavras{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 5em;
+  }
+}

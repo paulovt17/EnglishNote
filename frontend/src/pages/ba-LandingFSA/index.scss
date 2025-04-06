@@ -1,0 +1,34 @@
+.LandingFSA {
+  background-color: #221F1F;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  
+
+
+  .titulo{
+    color: #E3FC58;
+  
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+
+    img{
+      width: 50em;
+      height: 10em;
+      border-radius: 5px;
+      box-shadow: 4px 4px 8px black;
+    }
+    img:hover{
+      width: 55em;
+      height: 12em;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+LOGIN
+create table tb_usuario (
+id_usuario int primary key auto_increment,
+nome_usuario varchar (100),
+senha_usuario varchar (100)
+);
+
+
+ENGLISH
+create table tb_words (
+id_word int primary key auto_increment,
+word varchar (100),
+translation varchar (100),
+type enum (word, expression),
+phrase varchar (100),
+music_id int,
+foreign key (music_id) references tb_musics(id_music),
+data date,
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_musics (
+id_music int primary key auto_increment,
+music_name varchar (100),
+artist varchar (100),
+length varchar (100),
+lyric varchar (1000),
+translation varchar (1000),
+cover mediumblob,
+music_link varchar (500),
+visto boolean,
+data date,
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+
+TREINO
+create table tb_mes (
+id_mes int primary key auto_increment,
+mes varchar (100),
+qtd_dias int,
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_dia_concluido (
+id_dia_concluido int primary key auto_increment,
+dia varchar,
+data date,
+concluido boolean,
+dificuldade enum ('Facil','Medio','Dificil'),
+duracao varchar(100),
+qtd_exercicios int,
+dia_semana enum (seg, ter, qua, qui, sex, sab),
+id_mes int,
+id_usuario int primary key auto_increment,
+foreign key (id_mes) references tb_mes(id_mes),
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_exercicio (
+id_exercicio int primary key auto_increment,
+nome_exercicio varchar (100),
+tipo enum (serie, tempo),
+repeticoes int,
+series int,
+duracao int,
+qtd_partes_corpo int,
+dia_semana enum (seg, ter, qua, qui, sex, sab),
+imagem mediumblob,
+link_como_fazer varchar (500),
+ordem int auto increment,
+data date,
+id_dia_concluido int,
+id_usuario int primary key auto_increment,
+foreign key (id_dia_concluido) references tb_dia_concluido(id_dia_concluido),
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_partes_corpo (
+id_parte_corpo int primary key auto_increment,
+parte varchar(100), 
+exercicio_id int,
+foreign key (exercicio_id) references tb_exercicio(id_exercicio),
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+
+
+
+FILMES
+
+create table tb_visto (
+id_visto int primary key auto_increment,
+nome varchar (100),
+tipo enum (filme, anime, serie),
+imagem mediumblob,
+estrela int,
+data_visto date,
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_filme (
+id_filme int primary key auto_increment,
+nome_filme varchar (100),
+tipo enum (filme, anime, serie),
+duracao varchar (100),
+prioridade enum (alta, media, baixa),
+sinopse varchar (1000),
+imagem mediumblob,
+visto boolean,
+estrela int,
+avaliacao varchar (1000),
+id_visto int,
+id_usuario int primary key auto_increment,
+foreign key (id_visto) references tb_visto (id_visto),
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_serie (
+id_serie int primary key auto_increment,
+nome_serie varchar (100),
+tipo enum (filme, anime, serie),
+qtd_temporadas int,
+prioridade enum (alta, media, baixa),
+sinopse varchar (1000),
+imagem mediumblob,
+visto boolean,
+estrela int,
+avaliacao varchar (1000),
+id_visto int,
+id_usuario int primary key auto_increment,
+foreign key (id_visto) references tb_visto (id_visto),
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_qtd_temporadas (
+id_temporada int primary key auto_increment,
+temporada varchar (10),
+qtd_episodios int ,
+serie_id,
+foreign key (serie_id) references tb_serie(id_serie),
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_eps_temporada (
+id_episodio int primary key auto_increment,
+episodio varchar (10),
+temporada_id,
+visto boolean,
+foreign key (temporada_id) references tb_qtd_temporadas(id_temporada), 
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_anime (
+id_anime int primary key auto_increment,
+nome_anime varchar (100),
+tipo enum (filme, anime, serie),
+qtd_episodios int,
+prioridade enum (alta, media, baixa),
+sinopse varchar (1000),
+imagem mediumblob,
+visto boolean,
+estrela int,
+avaliacao varchar (1000),
+id_visto int,
+id_usuario int primary key auto_increment,
+foreign key (id_visto) references tb_visto (id_visto),
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_eps_anime (
+id_episodio int primary key auto_increment,
+episodio varchar (10),
+anime_id int,
+visto boolean,
+foreign key (anime_id) references tb_anime(id_anime),
+id_usuario int primary key auto_increment,
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);

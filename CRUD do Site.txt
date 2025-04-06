@@ -1,0 +1,380 @@
+Words Page
+
+select word, translation, phrase
+from tb_words;
+
+select word, translation, phrase
+from tb_words;
+where word like '?% or translation like '?%';
+
+select word, translation, phrase
+from tb_words
+where type = word;
+
+select word, translation, phrase
+from tb_words
+where type = word and word like '?% or translation like '?%';
+
+select word, translation, phrase
+from tb_words
+where type = expression;
+
+select word, translation, phrase
+from tb_words
+where type = expression and word like '?% or translation like '?%';
+
+delete from tb_words
+where id_word = ?;
+
+update tb_words
+set word = ?, translation = ?, phrase = ?
+where id_word = ?;
+
+
+
+New Word Page
+
+insert into tb_word (word, translation, type, phrase, data, id_music, id_usuario)
+values (?,?,?,?,?,?,?);
+
+
+
+
+Musics Page
+
+select music_name, artist, length, cover, visto, id_usuario
+from tb_musics;
+
+select music_name, artist, length, cover, visto, id_usuario
+from tb_musics
+where music_name like '?%' or artist like '?%';
+
+delete from tb_musics
+where id_music = ?;
+
+
+
+Selected Music Page 
+
+select music_name, artist, cover, lyric, translation, music_link, id_usuario
+from tb_musics
+where id_music = ?;
+
+insert into tb_word (word, translation, type, phrase, data, id_music, id_usuario)
+values (?,?,?,?,?,?,?);
+
+update tb_musics
+set visto = ?
+where id_music = ?;
+
+select word, translation, phrase, id_usuario
+from tb_words
+where id_music = ?;
+
+delete from tb_words;
+
+update tb_words
+set word = ?, translation = ?, phrase = ?
+where id_word = ?;
+
+
+
+New Music Page
+
+insert into tb_musics (music_name, artist, length, lyric, translation, cover, music_link, visto, data, id_usuario)
+values (?,?,?,?,?,?,?,?,?,?);
+
+
+
+
+
+
+Week Words Page
+
+select word, type, translation, phrase, id_usuario
+from tb_words
+where data < ? and data > ?;
+
+
+
+
+
+Listened week Page
+
+select music_name, artist, length, imagem, id_usuario
+from tb_musics
+where data < ? and data > ? and visto = ?;
+
+
+
+
+
+
+Treino de Hoje
+
+select nome_exercicio, tipo, repeticoes, series, duracao, imagem, id_usuario
+from tb_exercicio
+where dia_semana = ? and ordem = ?;
+
+select id_dia_concluido
+from tb_dia_concluido
+where data = ?;
+
+update tb_dia_concluido
+set concluido = ?, dificuldade = ?, duracao = ?, qtd_exercicios = ?, dia_semana = ?
+where id_dia_concluido and data = ?;
+
+update tb_exercicio
+set id_dia_concluido = ?;
+where id_exercicio = ? 
+
+
+
+
+Como Fazer
+
+select link_como_fazer, parte, e.id_usuario
+from tb_exercicio e
+where id_exercicio = ?
+inner join tb_partes_corpo on tb_partes_corpo.exercicio_id = tb_exercicio.id_exercicio;
+
+
+
+
+Dias Treinados
+
+select mes, qtd_dias, dia, data, concluido, m.id_usuario
+from tb_mes m
+where id_mes = ?
+inner join tb_dia_concluido on tb_dia_concluido.id_mes = tb_mes.id_mes;
+
+
+
+
+Treino dia
+
+select data, dificuldade, d.duracao, qtd_exercicios, imagem, e.duracao, series, repeticoes, nome_exercicio, d.id_usuario
+from tb_dia_concluido d
+inner join tb_exercicio e on e.id_dia_concluido = d.id_dia_concluido
+where id_dia_concluido = ? and id_exercicio = ?;
+
+
+
+
+
+Treinos
+
+select nome_exercicio, tipo, repeticoes, series, duracao, imagem, ordem, id_usuario
+from tb_exercicio
+where dia_semana = ?
+order by ordem desc;
+
+select nome_exercicio, tipo, repeticoes, series, duracao, imagem, ordem, id_usuario
+from tb_exercicio
+inner join tb_partes_corpo on tb_partes_corpo.exercicio_id = tb_exercicio.id_exercicio
+where parte = ?
+order by ordem desc;
+
+delete from tb_exercicio
+where id_exercicio = ?;
+
+
+
+selected Treino
+
+select nome_exercicio, tipo, serie, repeticoes, series, qtd_partes_corpo, dia_semana, parte, imagem, link_como_fazer
+from tb_exercicio 
+inner join tb_partes_corpo on tb_partes_corpo.exercicio_id = tb_exercicio.id_exercicio
+where id_exercicio = ?;
+
+update tb_exercicio
+set repeticoes = ?, series = ?, duracao = ?, dia = ?, imagem = ?, link_como_fazer
+where id_exercicio = ?;
+
+
+
+
+Add Treino
+
+insert into tb_exercicio (nome_exercicio, tipo, repeticoes, series, duracao, qtd_partes_corpo, dia_semana, imagem, link_como_fazer, data, id_dia_concluido, id_usuario)
+values (?,?,?,?,?,?,?,?,?,?,?,?);
+
+insert into tb_partes_corpo (parte, exercicio_id, id_usuario)
+values (?,?,?);
+
+insert into tb_mes (mes, qtd_dias, id_usuario)
+values (?,?,?);
+
+insert into tb_dia_concluido (dia, data, concluido, dificuldade, duracao, qtd_exercicios, dia_semana, id_mes, id_usuario);
+values (?,?,?,?,?,?,?,?,?);
+
+
+
+
+
+Dias Treinado na Semana
+
+select dia, concluido, dia_semana, duracao, dificuldade, qtd_exercicio, id_usuario
+from tb_dia_concluido
+where data > ? and data < ?;
+
+
+
+
+Pagina Filmes
+
+select nome_filme, duracao, prioridade, imagem, visto, id_usuario
+from tb_filme;
+
+delete from tb_filme
+where id_filme = ?;
+
+
+
+
+Pagina Filme Selected
+
+select nome_filme, tipo, sinopse, estrela, imagem, avaliacao, id_visto id_usuario
+from tb_filme
+where id_filme = ?;
+
+update tb_filme
+set estrela = ?, avaliacao = ?, visto = ?, id_visto
+where id_filme = ?;
+
+update tb_visto
+set estrela = ?
+where id_visto = ?;
+
+insert into tb_visto (nome, tipo, imagem, estrela, data_visto, id_usuario)
+values (?,?,?,?,?,?);
+
+
+
+
+
+Pagina Series
+
+select nome_serie, qtd_temporadas, prioridade, imagem, visto, id_usuario
+from tb_filme;
+
+delete from tb_serie
+where id_serie = ?;
+
+
+
+
+
+Pagina serie Selected
+
+select nome_serie, tipo, sinopse, estrela, imagem, avaliacao, temporada, episodio, id_visto, s.id_usuario
+from tb_serie s
+inner join tb_qtd_temporada on tb_qtd_temporada.serie_id = tb_serie.id_serie
+inner join tb_eps_temporada on tb_eps_temporada.temporada_id = tb_temporada.id_temporada
+where id_serie = ? and id_temporada = ?;
+
+update tb_serie
+set estrela = ?, avaliacao = ?, visto = ?, id_visto = ?
+where id_serie =?;
+
+update tb_visto
+set estrela = ?
+where id_visto = ?;
+
+update tb_eps_temporada
+set visto = ?
+where id_episodio = ?;
+
+insert into tb_visto (nome, tipo, imagem, estrela, data_visto, id_usuario)
+values (?,?,?,?,?,?);
+
+
+
+
+
+
+Pagina Anime
+
+select nome_anime, qtd_episodios, prioridade, imagem, visto, id_usuario
+from tb_anime;
+
+delete from tb_anime
+where id_anime = ?;
+
+
+
+
+Pagina Anime selected
+
+select nome_anime, tipo, sinopse, estrela, imagem, avaliacao, episodio, id_visto, a.id_usuario
+from tb_anime a
+inner join tb_eps_anime on tb_eps_anime.anime_id = tb_anime.id_anime
+where id_anime = ?;
+
+update tb_anime
+set estrela = ?, avaliacao = ?, visto = ?, id_visto = ?
+where id_anime =?;
+
+update tb_visto
+set estrela = ?
+where id_visto = ?;
+
+update tb_eps_anime
+set visto = ?
+where id_episodio = ?;
+
+insert into tb_visto (nome, tipo, imagem, estrela, data_visto, id_usuario)
+values (?,?,?,?,?,?);
+
+
+
+
+add page
+
+insert into tb_filme(nome_filme, tipo, duracao, prioridade, sinopse, imagem, visto, estrela, avaliacao, id_visto, id_usuario)
+values (?,?,?,?,?,?,?,?,?,?,?);
+
+insert into tb_serie(nome_serie, tipo, qtd_temporada, prioridade, sinopse, imagem, visto, estrela, avaliacao, id_visto, id_usuario)
+values (?,?,?,?,?,?,?,?,?,?,?);
+
+insert into tb_qtd_temporada (temporada, qtd_episodios, serie_id, id_usuario)
+values (?,?,?,?);
+
+insert into tb_eps_temporada (episodio, temporada_id, visto, id_usuario)
+values (?,?,?,?);
+
+insert into tb_anime(nome_anime, tipo, qtd_episodios, prioridade, sinopse, imagem, visto, estrela, avaliacao, id_visto, id_usuario)
+values (?,?,?,?,?,?,?,?,?,?,?);
+
+insert into tb_eps_anime (episodio, anime_id, visto, id_usuario)
+values (?,?,?,?);
+
+
+
+
+
+
+Pagina Vistos
+
+select nome, imagem, estrela, id_usuario
+from tb_visto;
+
+select nome, imagem, estrela, id_usuario
+from tb_visto
+where tipo = ?; 
+
+delete from tb_visto
+where id_visto = ?;
+
+
+
+
+
+Pagina Visto na Semana
+select nome, estrela, imagem, id_usuario
+from tb_visto
+where data > ? and data < ?;
+
+select nome, estrela, imagem, id_usuario
+from tb_visto
+where tipo = ? and data > ? and data < ?;

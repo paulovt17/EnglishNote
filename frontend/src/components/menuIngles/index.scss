@@ -1,0 +1,40 @@
+.MenuEnglish {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-self: start;
+  
+    .menu{
+      height: 100vh;
+      position: relative;
+      width: 13em;
+      background-color: #D1253A;
+      display: flex;
+      flex-direction: column; 
+      padding: 1em 2em;
+      justify-content: space-between;
+      z-index: 2;
+        
+    }
+
+    .bar{
+        width: 4em;
+        height: 4.1em;
+    }
+    .bar:hover{
+        width: 5em;
+        height: 5.2em;
+    }
+
+    #home{
+        font-size: 3em;
+        color: #fff;
+    }
+
+    #home:hover{
+        font-size: 4em;
+        color: #00274D;
+    }
+  
+}

@@ -1,0 +1,79 @@
+.WordsPage {
+  background: linear-gradient(to bottom, #FF6F61, #B22234);
+  min-height: 100vh;
+  height: 100%; // Garante que o body cubra toda a altura da janela
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  
+
+  .titulo{
+    color: #00274D;
+  }
+
+  .pesquisar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    .filtro{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      padding: 1em 3em 1em 3em;
+      color: #fff;
+
+      .all0, .word0, .expression0{
+        font-size: 2rem;
+      }
+      .all0:hover, .word0:hover, .expression0:hover{
+        color: #00274D;
+      }
+      .all1, .word1, .expression1{
+        font-size: 3rem;
+      }
+    }
+    input{
+      width: 50em;
+      height: 4em;
+      border-radius: 2em;
+      border: none;
+      background-color: #FCF8D1;
+      box-shadow: 2px 2px 8px black;
+    }
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 0em 5em 0em;
+    .info{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 1em 22em 1em 1em;
+      justify-content: center;
+      gap: 5.5em;
+      color: #87CEEB;
+    }
+
+    .palavras{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  .addCircle{
+    width: 8em;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+  }
+
+  .addCircle:hover{
+    width: 10em;
+  }
+}

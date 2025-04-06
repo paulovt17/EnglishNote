@@ -1,0 +1,61 @@
+Cadastrar page
+http://localhost:2311/usuario/
+
+
+Login Page
+http://localhost:2311/entrar/
+
+
+Words Semana Page
+http://localhost:2311/words/semana
+
+http://localhost:2311/words/tipo/semana
+
+
+Musicas Semana Page
+http://localhost:2311/musics/semana
+
+
+Words Page
+http://localhost:2311/words/
+
+http://localhost:2311/words/filtradas
+
+http://localhost:2311/words/tipo
+
+http://localhost:2311/words/tipo/filtradas
+
+http://localhost:2311/words/atualizar/:id
+
+http://localhost:2311/words/deletar/:id
+
+
+Musics Page
+http://localhost:2311/musics/
+
+http://localhost:2311/musics/filtradas
+
+http://localhost:2311/musics/deletar/:id
+
+
+Music Selected Page
+http://localhost:2311/musics/:id
+
+http://localhost:2311/musics/marcarvisto/:id
+
+http://localhost:2311/words/inserir
+
+http://localhost:2311/words/:id
+
+http://localhost:2311/words/atualizar/:id
+
+http://localhost:2311/words/deletar/:id
+
+
+New Word Page
+http://localhost:2311/words/inserir
+
+
+New Music Page
+http://localhost:2311/musics/inserir
+

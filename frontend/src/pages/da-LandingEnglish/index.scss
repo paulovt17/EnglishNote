@@ -1,0 +1,50 @@
+.LandingEnglish {
+  background: linear-gradient(to bottom, #FF6F61, #B22234);
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+
+  .menu{
+    height: 100vh;
+    position: absolute;
+    width: 13em;
+    background-color: #00274D;
+  }
+
+
+  .titulo{
+    color: #00274D;
+  }
+
+
+.principal{
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  justify-content: center;
+  align-items: center;
+  
+  a{
+    position: relative;
+  }
+  p{
+    position: absolute;
+    color: #fff;
+    top: -40px;
+  }
+
+  img{
+    width: 50em;
+    height: 10em;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px black;
+  }
+  img:hover{
+    width: 55em;
+    height: 12em;
+  }
+}
+}
+

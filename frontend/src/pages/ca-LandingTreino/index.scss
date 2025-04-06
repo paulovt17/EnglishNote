@@ -1,0 +1,45 @@
+.LandingTreino {
+  background: linear-gradient(to bottom, #00274D, #005BB3);  
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  .titulo{
+    color: #F2F2F2;
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+  
+    .relogio{
+      width: 12m;
+      height: 12em;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+    }
+    a{
+      position: relative;
+    }
+
+    .correndo{
+      width: 60em;
+      height: 15em;
+      border-radius: 5px;
+      box-shadow: 4px 4px 8px black;
+    }
+
+    .treinando{
+      width: 50em;
+      height: 10em;
+      border-radius: 5px;
+      box-shadow: 4px 4px 8px black;
+    }
+  }
+} 
